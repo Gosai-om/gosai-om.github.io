@@ -189,6 +189,42 @@ section { padding-block: 64px; display: grid; gap: 32px; }
 .brief .cta { margin-top: 2px; }
 .brief .status { font-size: .85rem; color: var(--ok); min-height: 1.2em; }
 
+/* Product feature (TableCue) */
+.product { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: clamp(18px, 3vw, 28px); display: grid; gap: 28px; }
+.product-main { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: start; }
+@media (max-width: 900px) { .product-main { grid-template-columns: 1fr; } }
+.frame { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--sunk); min-width: 0; }
+.frame-bar { display: flex; gap: 6px; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+.frame-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.frame video, .frame img { display: block; width: 100%; height: auto; }
+.product-copy { display: grid; gap: 16px; min-width: 0; }
+.product-copy .lead { font-size: 1rem; }
+.product .stack-line { display: flex; flex-wrap: wrap; gap: 6px; }
+.product .tagc { white-space: nowrap; }
+.feat { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.feat li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: .95rem; }
+.feat svg { width: 18px; height: 18px; color: var(--ok); margin-top: 3px; }
+.feat b { font-weight: 600; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, .5fr)) repeat(2, minmax(0, 1.4fr)); gap: 12px; align-items: start; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } .gallery .wide { grid-column: span 3; } }
+.gallery figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+.gallery a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--sunk); }
+.gallery img { display: block; width: 100%; height: auto; }
+.gallery figcaption { font-size: .8rem; color: var(--muted); }
+.arch { display: grid; gap: 10px; }
+.arch h3 { font-size: 1rem; }
+.arch-scroll { overflow-x: auto; }
+.arch svg { width: 100%; min-width: 640px; height: auto; display: block; }
+.arch .box { fill: var(--sunk); stroke: var(--line); }
+.arch .hot { fill: var(--accent-soft); stroke: var(--accent); }
+.arch text { fill: var(--fg); font: 600 13px var(--font-body); }
+.arch .sub { fill: var(--muted); font: 400 11px var(--font-mono); }
+.arch .mk { fill: var(--muted); }
+.arch .ln { stroke: var(--muted); stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+.arch .ln.live { stroke: var(--accent); stroke-dasharray: 5 4; }
+.sample { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; }
+.sample p { color: var(--muted); font-size: .93rem; max-width: 64ch; }
+
 footer { padding-block: 36px 0; color: var(--muted); font-size: .88rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 64px; }
 
 /* Floating WhatsApp (mobile) */
@@ -216,6 +252,7 @@ footer { padding-block: 36px 0; color: var(--muted); font-size: .88rem; display:
     <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
   </defs>
 </svg>
 
@@ -224,6 +261,7 @@ footer { padding-block: 36px 0; color: var(--muted); font-size: .88rem; display:
     <a class="brand" href="#top" aria-label="Om Gosai, back to top"><span class="mark">OG</span>Om Gosai</a>
     <nav aria-label="Sections">
       <a href="#services">Services</a>
+      <a href="#products">Products</a>
       <a href="#work">Work</a>
       <a href="#process">How I work</a>
       <a href="#faq">FAQ</a>
@@ -272,6 +310,77 @@ footer { padding-block: 36px 0; color: var(--muted); font-size: .88rem; display:
         <ul><li>Code walkthrough &amp; docs</li><li>Fix the urgent issues first</li><li>Upgrade outdated packages</li></ul></article>
       <article class="card svc"><span class="ico"><svg><use href="#i-cal"/></svg></span><h3>Monthly maintenance</h3><p>A fixed block of hours each month for fixes, updates and support tickets.</p>
         <ul><li>Dependency &amp; security updates</li><li>Small change requests</li><li>Monitoring &amp; quick fixes</li></ul></article>
+    </div>
+  </section>
+
+  <section id="products" aria-labelledby="products-h">
+    <div class="sec-head">
+      <span class="eyebrow">Own product</span>
+      <h2 id="products-h">TableCue: QR ordering for restaurants</h2>
+      <p class="lead">A white-label product I designed and built end to end. Guests scan the QR code on their table, order and pay from their phone; the kitchen and waiters see every order the moment it's placed.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-main">
+        <div class="frame">
+          <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <!-- Demo video: put a short MP4 at assets/tablecue/demo.mp4, then replace the <img> below with:
+          <video id="tc-demo" autoplay muted loop playsinline preload="metadata" poster="assets/tablecue/bill-panel.png" width="1280" height="860" aria-label="TableCue demo: a guest orders on a phone and the order appears live on the staff screens"><source src="assets/tablecue/demo.mp4" type="video/mp4"></video>
+          -->
+          <img src="assets/tablecue/bill-panel.png" alt="TableCue staff console: floor view with live tables and a table's GST bill" width="1280" height="860">
+        </div>
+        <div class="product-copy">
+          <ul class="feat">
+            <li><svg><use href="#i-check"/></svg><span><b>Live kitchen &amp; floor screens</b>: orders, "call waiter" and bill requests arrive instantly over WebSockets.</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>GST-ready bills</b>: CGST/SGST per rate, optional service charge the guest can remove, print-ready receipts.</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>Payments</b>: Razorpay with server-side signature checks and signed webhooks, or pay at the counter by cash, card or UPI.</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>Multi-restaurant</b>: one installation serves many restaurants, each with its own branding and strictly separated data.</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>Reports &amp; admin</b>: daily sales, top items, busy hours, CSV export; menu, tables and QR codes.</span></li>
+          </ul>
+          <div class="stack-line"><span class="tagc">FastAPI</span><span class="tagc">PostgreSQL</span><span class="tagc">Redis</span><span class="tagc">Socket.IO</span><span class="tagc">Celery</span><span class="tagc">Angular 22</span><span class="tagc">Signals</span><span class="tagc">Razorpay</span><span class="tagc">Docker</span><span class="tagc">Pytest</span><span class="tagc">Playwright</span></div>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://wa.me/919664617806?text=Hi%20Om%2C%20I%20saw%20TableCue%20on%20your%20portfolio%20and%20would%20like%20a%20demo." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Ask for a live demo</a>
+          </div>
+          <p class="note"><svg><use href="#i-lock"/></svg>The code is private because TableCue is a commercial product. I'm happy to walk through the code and architecture on a call.</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure><a href="assets/tablecue/guest-menu-options.png" target="_blank" rel="noopener"><img src="assets/tablecue/guest-menu-options.png" alt="Guest phone: choosing item options from the menu" width="390" height="844" loading="lazy"></a><figcaption>Menu &amp; options</figcaption></figure>
+        <figure><a href="assets/tablecue/guest-live-status.png" target="_blank" rel="noopener"><img src="assets/tablecue/guest-live-status.png" alt="Guest phone: live order status" width="390" height="844" loading="lazy"></a><figcaption>Live order status</figcaption></figure>
+        <figure><a href="assets/tablecue/guest-pay.png" target="_blank" rel="noopener"><img src="assets/tablecue/guest-pay.png" alt="Guest phone: GST bill and online payment" width="400" height="860" loading="lazy"></a><figcaption>Bill &amp; payment</figcaption></figure>
+        <figure class="wide"><a href="assets/tablecue/kitchen-board.png" target="_blank" rel="noopener"><img src="assets/tablecue/kitchen-board.png" alt="Kitchen board: new, preparing and ready columns updating live" width="1708" height="566" loading="lazy"></a><figcaption>Kitchen board (live)</figcaption></figure>
+        <figure class="wide"><a href="assets/tablecue/reports.png" target="_blank" rel="noopener"><img src="assets/tablecue/reports.png" alt="Staff console: sales report with payment methods, top items and busy hours" width="1280" height="860" loading="lazy"></a><figcaption>Owner reports</figcaption></figure>
+      </div>
+
+      <div class="arch">
+        <h3>How it fits together</h3>
+        <div class="arch-scroll"><svg viewBox="0 0 900 250" role="img" aria-labelledby="arch-t">
+          <title id="arch-t">Guest phones and staff screens talk to a FastAPI backend over HTTPS and WebSockets; the backend uses PostgreSQL, Redis, Celery workers, file storage and Razorpay.</title>
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 0 10 5 0 10z"/></marker></defs>
+          <rect class="box" x="10" y="30" width="190" height="66" rx="10"/><text x="26" y="58">Guest phone</text><text class="sub" x="26" y="80">Angular web app · QR scan</text>
+          <rect class="box" x="10" y="150" width="190" height="66" rx="10"/><text x="26" y="178">Staff screens</text><text class="sub" x="26" y="200">kitchen · floor · admin</text>
+          <rect class="hot" x="330" y="75" width="220" height="100" rx="12"/><text x="350" y="108">FastAPI backend</text><text class="sub" x="350" y="130">REST API · Socket.IO</text><text class="sub" x="350" y="150">tenant isolation · JWT</text>
+          <rect class="box" x="690" y="10" width="200" height="46" rx="10"/><text x="706" y="38">PostgreSQL</text>
+          <rect class="box" x="690" y="68" width="200" height="46" rx="10"/><text x="706" y="96">Redis</text><text class="sub" x="770" y="96">events · limits</text>
+          <rect class="box" x="690" y="126" width="200" height="46" rx="10"/><text x="706" y="154">Celery workers</text>
+          <rect class="box" x="690" y="184" width="200" height="56" rx="10"/><text x="706" y="208">Razorpay · S3 storage</text><text class="sub" x="706" y="228">payments · menu images</text>
+          <path class="ln" d="M200 56 C 270 56, 270 100, 328 100"/>
+          <path class="ln" d="M200 186 C 270 186, 270 150, 328 150"/>
+          <path class="ln live" d="M330 92 C 270 70, 260 74, 202 74"/>
+          <path class="ln live" d="M330 160 C 270 175, 260 172, 202 172"/>
+          <path class="ln" d="M550 100 L 688 33"/><path class="ln" d="M550 112 L 688 91"/><path class="ln" d="M550 138 L 688 149"/><path class="ln" d="M550 160 L 688 210"/>
+          <text class="sub" x="232" y="118">live updates</text>
+        </svg></div>
+      </div>
+    </div>
+
+    <div class="sample">
+      <div>
+        <h3>Open-source code sample: FastAPI SaaS starter</h3>
+        <p>Multi-tenant FastAPI template with JWT auth and refresh tokens, async SQLAlchemy, Alembic migrations, tests and CI. Read it to see how I structure and test backend code.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://github.com/Gosai-om/fastapi-saas-starter" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>View on GitHub</a>
     </div>
   </section>
 
@@ -469,6 +578,14 @@ footer { padding-block: 36px 0; color: var(--muted); font-size: .88rem; display:
     try { localStorage.setItem("og-theme", next); } catch (e) {}
     paintToggle();
   });
+
+  /* Demo video: respect reduced-motion (show the poster, let the visitor press play). */
+  var demo = document.getElementById("tc-demo");
+  if (demo && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    demo.removeAttribute("autoplay");
+    demo.pause();
+    demo.setAttribute("controls", "");
+  }
 
   /* Project filters */
   var chips = document.querySelectorAll("[data-filter]");
